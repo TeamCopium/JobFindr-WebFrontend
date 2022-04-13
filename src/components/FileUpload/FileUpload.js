@@ -23,7 +23,6 @@ const FileUpload = () => {
     const fileData = new FormData();
     fileData.append("file",file[0]);
     fileData.append("email",email)
-
     axios({
       method: "post",
       "url" : `http://127.0.0.1:8000/api/uploadResume`,
