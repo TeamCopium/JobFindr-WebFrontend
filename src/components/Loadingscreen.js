@@ -13,7 +13,7 @@ const Loadingscreen = () => {
       </div>
       <div data-aos="fade-left"  data-aos-easing="ease-in-sine" className="justify-center w-[40vw]">
         <h1
-          className="text-4xl text-white text-[#000000]"
+          className="text-4xl text-white"
         >
           Get The Job
           <br /> That You Dream
