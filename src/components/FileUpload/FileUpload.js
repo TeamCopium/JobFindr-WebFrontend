@@ -22,7 +22,7 @@ const FileUpload = () => {
   const SubmitFile = async() => {
     const fileData = new FormData();
     fileData.append("file",file[0]);
-    fileData.append("email",email);
+    fileData.append("email",email)
 
     axios({
       method: "post",
