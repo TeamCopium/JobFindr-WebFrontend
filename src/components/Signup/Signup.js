@@ -4,6 +4,7 @@ import styles from "./Signup.module.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from "sweetalert2";
+import {Link} from "react-router-dom"
 
 AOS.init()
 
@@ -76,8 +77,8 @@ const Signup = () => {
               />
             </div>
           <button onClick={()=>{Signup()}}  className="bg-black text-white p-2 px-4 rounded-lg mt-12 hover:bg-[#838383]">Sign Up</button>
-        <p className="text-sm text-[#838383] mt-4">Already have an account ? <a href="/login" className="text-[#000000] hover:underline">Login Here</a></p>
-        <p className="text-sm text-[#838383] mt-2">Are you an organization ? <a href="/organization/signup" className="text-[#000000] hover:underline">Signup Here</a></p>
+        <p className="text-sm text-[#838383] mt-4">Already have an account ? <Link to="/login"><a  className="text-[#000000] hover:underline">Login Here</a></Link></p>
+        <p className="text-sm text-[#838383] mt-2">Are you an organization ? <Link to="/organization/signup"><a className="text-[#000000] hover:underline">Signup Here</a></Link></p>
       </div>
     </div>
   );

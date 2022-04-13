@@ -4,6 +4,7 @@ import axios from 'axios'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from "sweetalert2"
+import { Link } from 'react-router-dom';
 
 AOS.init()
 
@@ -45,7 +46,7 @@ const OrganizationLogin = () => {
       className={`border-2 rounded-lg w-[40vw] bg-white h-[60vh] m-auto mt-24 + + ${styles.boxshadow} `}
     >
       <p className="text-black text-2xl p-4 mt-4">
-        <strong>Log In</strong>
+        <strong>Organization Log In</strong>
       </p>
       <form onSubmit={handleSubmit} className="m-auto mt-4">
         <div className="mt-8">
@@ -75,7 +76,7 @@ const OrganizationLogin = () => {
         
         <button type="submit" className="bg-black text-white p-2 px-4 rounded-lg mt-12 hover:bg-[#838383]">Log In</button>
       </form>
-      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <a href="/organization/signup" className="text-[#000000] hover:underline">Register Here</a></p>
+      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <Link to="/organization/signup"><a href="/organization/signup" className="text-[#000000] hover:underline">Register Here</a></Link></p>
     </div>
   </div>
   )

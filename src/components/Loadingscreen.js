@@ -11,7 +11,7 @@ const Loadingscreen = () => {
       <div data-aos="zoom-in" data-aos-offset="500" data-aos-easing="ease-in-sine" className="justify-center w-[50vw]  h-[80vh]">
         <img src={home} className="w-[40vw] h-[40vw] ml-auto" />
       </div>
-      <div data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine" className="justify-center w-[40vw]">
+      <div data-aos="fade-left"  data-aos-easing="ease-in-sine" className="justify-center w-[40vw]">
         <h1
           className="text-4xl text-white text-[#000000]"
         >

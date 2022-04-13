@@ -4,6 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from "sweetalert2"
 import axios from "axios"
+import {Link} from "react-router-dom"
+
 AOS.init()
 
 const OrganizationSignup = () => {
@@ -74,7 +76,7 @@ const OrganizationSignup = () => {
             />
           </div>
         <button onClick={()=>{Signup()}} className="bg-black text-white p-2 px-4 rounded-lg mt-12 hover:bg-[#838383]">Sign Up</button>
-      <p className="text-sm text-[#838383] mt-4">Already have an account ? <a href="/login" className="text-[#000000] hover:underline">Login Here</a></p>
+      <p className="text-sm text-[#838383] mt-4">Already have an account ? <Link to="/organization/login"><a className="text-[#000000] hover:underline">Login Here</a></Link></p>
     </div>
   </div>
   )

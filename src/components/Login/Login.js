@@ -4,7 +4,7 @@ import axios from 'axios'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from "sweetalert2"
-
+import {Link} from "react-router-dom"
 AOS.init()
 
 const Login = () => {
@@ -25,7 +25,11 @@ const Login = () => {
     })
     .then((response) => {
       console.log(response.data);
-      window.location.href="/fileupload"
+      if(response.data.skills.length == 0){
+      window.location.href="/fileupload"}
+      else{
+        window.location.href="/findjobs"
+      }
     })
     .catch((err) => {
       console.log(err);
@@ -75,7 +79,7 @@ const Login = () => {
         
         <button type="submit" className="bg-black text-white p-2 px-4 rounded-lg mt-12 hover:bg-[#838383]">Log In</button>
       </form>
-      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <a href="/register" className="text-[#000000] hover:underline">Register Here</a></p>
+      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <Link to="/register"><a className="text-[#000000] hover:underline">Register Here</a></Link></p>
     </div>
   </div>
   )
