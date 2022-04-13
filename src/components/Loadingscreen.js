@@ -1,15 +1,19 @@
 import React from "react";
 import home from "../assets/home.svg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Homescreen = () => {
+AOS.init()
+
+const Loadingscreen = () => {
   return (
-    <div className="p-4 items-center flex">
-      <div className="justify-center w-[50vw] ">
+    <div  className="p-4 items-center bg-[#414a4c] h-[100vh] flex">
+      <div data-aos="zoom-in" data-aos-offset="500" data-aos-easing="ease-in-sine" className="justify-center w-[50vw]  h-[80vh]">
         <img src={home} className="w-[40vw] h-[40vw] ml-auto" />
       </div>
-      <div className="justify-center w-[40vw]">
+      <div data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine" className="justify-center w-[40vw]">
         <h1
-          className="text-4xl text-black text-[#000000]"
+          className="text-4xl text-white text-[#000000]"
         >
           Get The Job
           <br /> That You Dream
@@ -26,4 +30,4 @@ const Homescreen = () => {
   );
 };
 
-export default Homescreen;
+export default Loadingscreen;

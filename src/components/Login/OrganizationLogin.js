@@ -7,9 +7,8 @@ import Swal from "sweetalert2"
 
 AOS.init()
 
-const Login = () => {
-
-  const [password,setpassword] = useState("")
+const OrganizationLogin = () => {
+    const [password,setpassword] = useState("")
   const [email,setemail] = useState("")
   localStorage.setItem("email", email)
   const handleSubmit = (e) => {
@@ -19,13 +18,13 @@ const Login = () => {
     loginData.append("password",password)
     axios({
       method: "post",
-      url: `http://127.0.0.1:8000/api/login/user?email=${email}&password=${password}`,
+      url: `http://127.0.0.1:8000/api/login/organization?email=${email}&password=${password}`,
       headers: { "Content-Type": "multipart/form-data" },
       data: loginData,
     })
     .then((response) => {
       console.log(response.data);
-      window.location.href="/fileupload"
+      window.location.href="/admin/dashboard"
     })
     .catch((err) => {
       console.log(err);
@@ -36,6 +35,7 @@ const Login = () => {
       })
     });
   }
+
   return (
     <div className={styles.bgimage}>
     <div
@@ -75,10 +75,10 @@ const Login = () => {
         
         <button type="submit" className="bg-black text-white p-2 px-4 rounded-lg mt-12 hover:bg-[#838383]">Log In</button>
       </form>
-      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <a href="/register" className="text-[#000000] hover:underline">Register Here</a></p>
+      <p className="text-sm text-[#838383] mt-4">Don't have an account ? <a href="/organization/signup" className="text-[#000000] hover:underline">Register Here</a></p>
     </div>
   </div>
   )
 }
 
-export default Login
+export default OrganizationLogin
